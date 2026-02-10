@@ -71,7 +71,7 @@ export default function FireyFlakes() {
     window.addEventListener('resize', resizeCanvas);
 
     const particles = [];
-    const maxParticles = 200; // Increased for better coverage
+    const maxParticles = 300; // Increased for better coverage
 
     function createParticle(isInitial = false) {
       // 1. WIDER SPAWN: Instead of one point, spawn anywhere along bottom or right side
@@ -92,8 +92,8 @@ export default function FireyFlakes() {
 
       // 2. WIDER ANGLE: PI * 0.75 is 135deg (Top-Left). 
       // We increase the variance from 0.3 to 1.5 for a "sweep" effect
-      const baseAngle = Math.PI * 0.85; 
-      const angle = baseAngle + (Math.random() - 0.5) * 1.5; 
+      const baseAngle = Math.PI * 0.85;
+      const angle = baseAngle + (Math.random() - 0.5) * 1.5;
       const speed = 0.002 + Math.random() * 0.004;
 
       const colorType = Math.random();
@@ -103,7 +103,7 @@ export default function FireyFlakes() {
         x, y,
         vx: Math.cos(angle) * speed,
         vy: Math.sin(angle) * speed,
-        size: 8 + Math.random() * 20,
+        size: 3 + Math.random() * 6,
         life: 1.0,
         color: color
       };
@@ -126,7 +126,7 @@ export default function FireyFlakes() {
         // 3. MORE TURBULENCE: Waves to make them feel less like straight lines
         p.x += p.vx + Math.sin(Date.now() * 0.001 + i) * 0.001;
         p.y += p.vy + Math.cos(Date.now() * 0.001 + i) * 0.0005;
-        
+
         p.life -= 0.003;
 
         // Reset if out of bounds or dead
@@ -162,5 +162,5 @@ export default function FireyFlakes() {
     return () => window.removeEventListener('resize', resizeCanvas);
   }, []);
 
-  return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none opacity-70" style={{ zIndex: 9999 }} />;
+  return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none opacity-40" style={{ zIndex: 9999 }} />;
 }
