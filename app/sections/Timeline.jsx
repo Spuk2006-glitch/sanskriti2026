@@ -3,7 +3,7 @@ import React from 'react';
 
 const TimelineEvent = ({ date, title, description, position = 'left' }) => {
     return (
-        <div className="relative flex items-center mb-10 last:mb-0">
+        <div id="events" className="scroll-mt-32 relative flex items-center mb-10 last:mb-0">
             {/* Left side content */}
             <div className={`${position === 'left' ? 'text-right pr-12' : ''} `} style={{ width: '47%' }}>
                 {position === 'left' && (
@@ -42,8 +42,10 @@ const Timeline = ({ events }) => {
         <div className="min-h-screen bg-black py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <h1 className="text-center text-7xl font-bold mb-24" style={{ fontFamily: 'samarkan, serif' }}>
-                    <span style={{ color: '#F59E0B' }}>Timeline</span>
+                <h1 className="text-center text-8xl font-bold mb-20" style={{ fontFamily: 'samarkan, serif' }}>
+                    <span className="text-white">:</span>
+                    <span style={{ color: '#F59E0B' }}> timeline </span>
+                    <span className="text-white">:</span>
                 </h1>
 
                 {/* Timeline Container */}
@@ -88,47 +90,47 @@ const Timeline = ({ events }) => {
 export default function FestivalTimeline() {
     const events = [
         {
-            date: '5th April, 2025',
+            date: '28th March, 2026',
             title: 'Curtain Raiser',
             description: 'Jadavpur University Salt Lake Campus'
         },
         {
-            date: '6th April, 2025',
+            date: '29th March, 2026',
             title: 'Prelims',
             description: 'OAT, Jadavpur Campus'
         },
         {
-            date: '7th April, 2025',
+            date: '30th March, 2026',
             title: 'Students Performance',
             description: 'OAT, Jadavpur Campus'
         },
         {
-            date: '8th April, 2025',
+            date: '31st March, 2026',
             title: 'Dance Night',
             description: 'OAT, Jadavpur Campus'
         },
         {
-            date: '9th April, 2025',
+            date: '1st April, 2026',
             title: 'All Events Day',
             description: 'OAT, Jadavpur Campus'
         },
         {
-            date: '10th April, 2025',
+            date: '2nd April, 2026',
             title: 'Eastern Night',
             description: 'Genre: Eastern Music. OAT Jadavpur University'
         },
         {
-            date: '11th April, 2025',
+            date: '3rd April, 2026',
             title: 'Western Night',
             description: 'Genre: Western Music. OAT Jadavpur University'
         },
         {
-            date: '12th April, 2025',
+            date: '4th April, 2026',
             title: 'Reunion Night',
             description: 'Genre: World Music. OAT Jadavpur University'
         },
         {
-            date: '13th April, 2025',
+            date: '5th April, 2026',
             title: 'Final Night',
             description: 'OAT Jadavpur University'
         }

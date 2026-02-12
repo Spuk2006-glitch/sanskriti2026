@@ -45,9 +45,10 @@ export default function Performance() {
         <div className="min-h-screen bg-black py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <h1 className="text-center text-7xl font-bold mb-24" style={{ fontFamily: 'samarkan, serif' }}>
-                    <span className="text-white">Past </span>
-                    <span style={{ color: '#F59E0B' }}>Performances</span>
+                <h1 className="text-center text-8xl font-bold mb-20" style={{ fontFamily: 'samarkan, serif' }}>
+                    <span className="text-white">: Past </span>
+                    <span style={{ color: '#F59E0B' }}>Performances </span>
+                    <span className="text-white">:</span>
                 </h1>
 
                 {/* Hover Expand Component */}
