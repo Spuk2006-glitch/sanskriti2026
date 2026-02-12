@@ -1,9 +1,5 @@
-import React from 'react'
+import About from "../sections/About";
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
+export default function Page() {
+  return <About/>;
 }
-
-export default page

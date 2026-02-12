@@ -4,7 +4,7 @@ import FieryGlowY from '../components/FieryGlowY'
 
 function Hero() {
   return (
-    <div className='h-screen w-full relative'>
+    <div id="home" className='h-screen w-full relative'>
       <FieryGlowY />
       {/* Wine red glow background */}
       <div className='absolute inset-0 bg-gradient-radial from-red-900 via-red-950/80 to-transparent pointer-events-none' ></div>
@@ -15,7 +15,7 @@ function Hero() {
 
 
           <h1 className='text-2xl tracking-widest font-base self-start leading-0.5'>
-            F.E.T.S.U Presents
+            F.E.T.S.U. Presents
           </h1>
           <h1 className='text-[10rem] leading-[10rem] font-[samarkan] text-red-600 text-shadow-2xl -mt-8'>
             sanskriti
